@@ -1,52 +1,218 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Laundry Cinta Sejati</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>Laundry Express</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', sans-serif;
+        }
+
+        body {
+            background: linear-gradient(45deg, #000000, #2d2d2d);
+            color: #ffffff;
+            scroll-behavior: smooth;
+        }
+
+        nav {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            padding: 20px 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(255, 255, 255, 0.1);
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin: 0 20px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-size: 1.1em;
+            transition: all 0.3s ease;
+            padding: 10px 15px;
+            border-radius: 5px;
+        }
+
+        nav ul li a:hover {
+            background: rgba(255, 255, 255, 0.1);
+            color: #00ff00;
+        }
+
+        section {
+            min-height: 100vh;
+            padding: 100px 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        #home {
+            background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+                        url('https://images.unsplash.com/photo-1581578731548-c64695cc6952?ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80');
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+        }
+
+        .hero-text {
+            max-width: 800px;
+        }
+
+        .hero-text h1 {
+            font-size: 3.5em;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 15px 30px;
+            background: #00ff00;
+            color: #000;
+            text-decoration: none;
+            border-radius: 30px;
+            margin-top: 30px;
+            font-weight: bold;
+            transition: transform 0.3s ease;
+        }
+
+        .cta-button:hover {
+            transform: scale(1.05);
+        }
+
+        #services {
+            background: #1a1a1a;
+        }
+
+        .services-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            max-width: 1200px;
+            width: 100%;
+        }
+
+        .service-card {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 30px;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s ease;
+        }
+
+        .service-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .service-card i {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #00ff00;
+        }
+
+        #contact {
+            background: #2d2d2d;
+            text-align: center;
+        }
+
+        .whatsapp-button {
+            display: inline-flex;
+            align-items: center;
+            background: #25D366;
+            color: white;
+            padding: 15px 30px;
+            border-radius: 30px;
+            text-decoration: none;
+            margin-top: 20px;
+        }
+
+        .whatsapp-button i {
+            margin-right: 10px;
+            font-size: 1.5em;
+        }
+
+        @media (max-width: 768px) {
+            nav ul {
+                flex-direction: column;
+                text-align: center;
+            }
+
+            nav ul li {
+                margin: 10px 0;
+            }
+
+            .hero-text h1 {
+                font-size: 2.5em;
+            }
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="#home">Home</a></li>
-                <li><a href="#installation">Installation</a></li>
-                <li><a href="#devices">Devices</a></li>
-                <li><a href="#chinese">简体中文</a></li>
-            </ul>
-        </nav>
-        <h1>Laundry Cinta Sejati</h1>
-        <p>Solusi Cuci Instant Untuk Anda Yang Malas</p>
-        <p>Hubungi Kami Saja</p>
-    </header>
+    <nav>
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#services">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
 
-    <section id="features">
-        <h2>Features</h2>
-        <div class="feature">
-            <h3>GKI kernel support</h3>
-            <p>GKI kernels support LKM/KMI methods for easy installation.</p>
-        </div>
-        <div class="feature">
-            <h3>New manager features</h3>
-            <p>Manager app has a new, redesigned look with several feature improvements and a UI overhaul.</p>
-        </div>
-        <div class="feature">
-            <h3>Module backup & restoration</h3>
-            <p>Allows for backup and restoration of modules, whether they were uninstalled accidentally, you changed your mind, or you simply want to restore a specific feature.</p>
-        </div>
-        <div class="feature">
-            <h3>Dynamic module mount</h3>
-            <p>Includes both Magic Mount and OverlayFS, which can be switched from the settings with a single toggle.</p>
-        </div>
-        <div class="feature">
-            <h3>Auto-updates</h3>
-            <p>Manager app updates automatically with new releases.</p>
+    <section id="home">
+        <div class="hero-text">
+            <h1>Laundry Express</h1>
+            <p>Layanan profesional dengan hasil bersih dan wangi yang tahan lama</p>
+            <a href="#contact" class="cta-button">Pesan Sekarang</a>
         </div>
     </section>
 
-    <footer>
-        <p>&copy; 2023 KernelSU Next. All rights reserved.</p>
-    </footer>
+    <section id="about">
+        <h2>Tentang Kami</h2>
+        <p>Kami menyediakan layanan laundry profesional dengan standar kebersihan tertinggi. Berdiri sejak 2010, kami telah dipercaya oleh ribuan pelanggan.</p>
+    </section>
+
+    <section id="services">
+        <h2>Layanan Kami</h2>
+        <div class="services-container">
+            <div class="service-card">
+                <i class="fas fa-tshirt"></i>
+                <h3>Cuci Reguler</h3>
+                <p>Layanan cuci standar 2 hari selesai</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-bolt"></i>
+                <h3>Express</h3>
+                <p>Layanan kilat 6 jam selesai</p>
+            </div>
+            <div class="service-card">
+                <i class="fas fa-couch"></i>
+                <h3>Cuci Karpet</h3>
+                <p>Layanan cuci karpet profesional</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2>Hubungi Kami</h2>
+        <a href="https://wa.me/6281234567890" class="whatsapp-button" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+            Chat via WhatsApp
+        </a>
+    </section>
 </body>
-</html
+</html>
