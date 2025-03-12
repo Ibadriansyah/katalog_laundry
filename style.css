@@ -1,0 +1,78 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000; /* Background hitam */
+    color: #fff; /* Teks putih */
+}
+
+header {
+    background-color: #111; /* Warna header lebih gelap */
+    color: #fff;
+    padding: 20px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+header p {
+    margin: 5px 0 0;
+    font-size: 1.2em;
+    color: #ccc; /* Warna teks lebih terang untuk kontras */
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    background-color: #222; /* Warna navigasi lebih gelap */
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.1em;
+}
+
+section#features {
+    padding: 20px;
+    background-color: #111; /* Warna section lebih gelap */
+    margin: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1); /* Bayangan putih */
+}
+
+.feature {
+    margin-bottom: 20px;
+}
+
+.feature h3 {
+    margin: 0 0 10px;
+    font-size: 1.5em;
+    color: #fff; /* Warna teks judul fitur */
+}
+
+.feature p {
+    margin: 0;
+    font-size: 1.1em;
+    color: #ccc; /* Warna teks deskripsi fitur */
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #111; /* Warna footer lebih gelap */
+    color: #fff;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+}
