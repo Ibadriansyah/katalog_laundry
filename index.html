@@ -8,15 +8,52 @@
     <meta name="keywords" content="laundry, cuci kering, cuci basah, setrika, WACUCI LAUNDRY">
     <title>WACUCI LAUNDRY</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
     <style>
+        /* CSS Custom Properties untuk Tema */
+        :root {
+            --background-color: #f4f7fa;
+            --text-color: #333;
+            --header-bg: linear-gradient(135deg, #c8f32c, #c8f32c);
+            --header-text: white;
+            --nav-bg: #004d40;
+            --nav-text: white;
+            --nav-hover: #ffeb3b;
+            --section-bg: white;
+            --section-text: #333;
+            --button-bg: #00796b;
+            --button-text: white;
+            --button-hover: #004d40;
+            --footer-bg: #004d40;
+            --footer-text: white;
+        }
+
+        /* Mode Gelap */
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --background-color: #1a1a1a;
+                --text-color: #e0e0e0;
+                --header-bg: linear-gradient(135deg, #c8f32c, #c8f32c);
+                --header-text: #e0e0e0;
+                --nav-bg: #00251a;
+                --nav-text: #e0e0e0;
+                --nav-hover: #ffeb3b;
+                --section-bg: #2d2d2d;
+                --section-text: #e0e0e0;
+                --button-bg: #c8f32c;
+                --button-text: #e0e0e0;
+                --button-hover: #00251a;
+                --footer-bg: #00251a;
+                --footer-text: #e0e0e0;
+            }
+        }
+
         /* General Styles */
         body {
             font-family: 'Poppins', sans-serif;
             margin: 0;
             padding: 0;
-            background-color: #f4f7fa;
-            color: #333;
+            background-color: var(--background-color);
+            color: var(--text-color);
             line-height: 1.6;
         }
         a {
@@ -31,25 +68,12 @@
 
         /* Header */
         header {
-            background: url('/workspaces/katalog_laundry/images.png') no-repeat center center/cover; /* Path ke gambar lokal */
-            color: white;
+            background: var(--header-bg);
+            color: var(--header-text);
             padding: 150px 0;
             text-align: center;
             position: relative;
             overflow: hidden;
-        }
-        header::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.5); /* Overlay gelap untuk meningkatkan keterbacaan teks */
-        }
-        header h1, header p {
-            position: relative;
-            z-index: 1;
         }
         header h1 {
             margin: 0;
@@ -64,7 +88,7 @@
 
         /* Navigation */
         nav {
-            background: #004d40;
+            background: var(--nav-bg);
             padding: 15px 0;
             text-align: center;
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
@@ -72,22 +96,24 @@
         nav a {
             margin: 0 20px;
             font-size: 1.1rem;
-            color: white;
+            color: var(--nav-text);
             transition: all 0.3s;
         }
         nav a:hover {
-            color: #ffeb3b;
+            color: var(--nav-hover);
             transform: translateY(-3px);
         }
 
         /* Section Styles */
         section {
             padding: 80px 0;
+            background-color: var(--section-bg);
+            color: var(--section-text);
         }
         section h2 {
             text-align: center;
             font-size: 2.5rem;
-            color: #00796b;
+            color: var(--button-bg);
             margin-bottom: 40px;
             font-weight: 600;
         }
@@ -97,7 +123,7 @@
             flex-wrap: wrap;
         }
         .content div {
-            background: white;
+            background: var(--section-bg);
             padding: 25px;
             margin: 15px;
             border-radius: 12px;
@@ -113,11 +139,11 @@
         .content div h3 {
             font-size: 1.5rem;
             margin-bottom: 15px;
-            color: #004d40;
+            color: var(--button-bg);
         }
         .content div p {
             font-size: 1rem;
-            color: #666;
+            color: var(--section-text);
         }
 
         /* Button Styles */
@@ -126,8 +152,8 @@
             align-items: center;
             justify-content: center;
             padding: 12px 25px;
-            background: #00796b;
-            color: white;
+            background: var(--button-bg);
+            color: var(--button-text);
             border-radius: 50px;
             text-align: center;
             margin-top: 20px;
@@ -138,7 +164,7 @@
             box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         }
         .button:hover {
-            background: #004d40;
+            background: var(--button-hover);
             transform: translateY(-3px);
             box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
         }
@@ -149,8 +175,8 @@
 
         /* Footer */
         footer {
-            background: #004d40;
-            color: white;
+            background: var(--footer-bg);
+            color: var(--footer-text);
             text-align: center;
             padding: 30px 0;
             margin-top: 60px;
@@ -174,9 +200,11 @@
             border-radius: 8px;
             font-size: 1rem;
             transition: border-color 0.3s ease;
+            background-color: var(--section-bg);
+            color: var(--section-text);
         }
         form input:focus, form textarea:focus {
-            border-color: #00796b;
+            border-color: var(--button-bg);
             outline: none;
         }
         form textarea {
@@ -184,8 +212,8 @@
             height: 150px;
         }
         form button {
-            background: #00796b;
-            color: white;
+            background: var(--button-bg);
+            color: var(--button-text);
             border: none;
             padding: 12px 25px;
             border-radius: 50px;
@@ -194,7 +222,7 @@
             transition: all 0.3s;
         }
         form button:hover {
-            background: #004d40;
+            background: var(--button-hover);
             transform: translateY(-3px);
         }
 
@@ -318,11 +346,11 @@
                 <textarea name="message" placeholder="Pesan Anda" required></textarea>
                 <button type="submit" class="button">Kirim Pesan</button>
             </form>
-            <div style="margin-top: 30px;">
-                <a href="https://wa.me/1234567890" target="_blank" class="button">
+            <div style="margin-top: 35px;">
+                <a href="https://wa.me/082111211107" target="_blank" class="button">
                     <i class="fab fa-whatsapp"></i> Hubungi via WhatsApp
                 </a>
-                <a href="https://www.instagram.com/wacucilaundry" target="_blank" class="button" style="margin-left: 15px;">
+                <a href="https://www.instagram.com/wacuci.laundry" target="_blank" class="button" style="margin-left: 15px;">
                     <i class="fab fa-instagram"></i> Instagram Kami
                 </a>
             </div>
